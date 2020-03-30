@@ -1,0 +1,50 @@
+{
+  "name": "Chirp!",
+  "version": "0.1.0",
+  "description": "Twitter client.",
+  "homepage": "vinestone_studio.xyz",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+	"pack": "electron-builder --dir",
+	"dist": "electron-builder",
+	"postinstall": "electron-builder install-app-deps"
+  },
+  "author": {
+	  "name": "Valdemar Lorenzen",
+	  "email": "valdemar.lorenzen@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0"
+  },
+  "build": {
+    "appId": "xyz.vinestone_studio.chirp",
+    "productName": "Chirp!",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "icon": "./public/icons/png/icon.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "icon": "./public/icons/png/icon.png"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./public/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  }
+}
