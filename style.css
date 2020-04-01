@@ -9,8 +9,7 @@ html, body {
 }
 
 #drag {
-	padding: 0.25em;
-	/*background: rgb(35, 30, 39);*/
+	padding: 1em;
 	background: black;
 	border-color: white;
 	border-width: 1px;
